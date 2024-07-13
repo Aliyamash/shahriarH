@@ -1,0 +1,29 @@
+{
+  "name": "shahriarh-project",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "dev": "next dev ",
+    "build": "next build",
+    "start": "next start",
+    "lint": "next lint"
+  },
+  "dependencies": {
+    "alpinejs": "^3.13.8",
+    "antd": "^5.17.3",
+    "aos": "^3.0.0-beta.6",
+    "firebase": "^10.11.0",
+    "next": "14.1.4",
+    "react": "^18",
+    "react-dom": "^18",
+    "react-tabs": "^6.0.2",
+    "react-toastify": "^10.0.5",
+    "swiper": "^11.1.1",
+    "typed.js": "^2.1.0"
+  },
+  "devDependencies": {
+    "autoprefixer": "^10.0.1",
+    "postcss": "^8",
+    "tailwindcss": "^3.3.0"
+  }
+}

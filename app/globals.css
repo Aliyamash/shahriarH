@@ -1,0 +1,220 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+@import 'react-toastify/dist/ReactToastify.css';
+
+@font-face {
+  font-family: "Montserrat";
+  src: url(../public/fonts/Montserrat/Montserrat-Regular.ttf),
+    url(../public/fonts/Montserrat/Montserrat-BoldItalic.ttf) format("truetype"),
+    url(../public/fonts/Montserrat/Montserrat-Light.ttf) format("truetype"),
+    url(../public/fonts/Montserrat/Montserrat-Medium.ttf) format("truetype"),
+    url(../public/fonts/Montserrat/Montserrat-Regular.ttf) format("truetype");
+    
+}
+body {
+  font-family: "Montserrat", sans-serif !important;
+  color: #c4cfde;
+}
+:root {
+  scroll-behavior: smooth;
+}
+.nav-scroll {
+  position: fixed;
+  width: 100%;
+  top: 0;
+  left: 0;
+  transition: 0.5s linear;
+  background: rgba(255, 255, 255, 0);
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(7.7px);
+  -webkit-backdrop-filter: blur(7.7px);
+} 
+.heart {
+  width: 25px;
+  height: 25px;
+  background: url("https://cssanimation.rocks/images/posts/steps/heart.png") no-repeat;
+  background-position: 0 0;
+  cursor: pointer;
+  transition: background-position 1s steps(28);
+  transition-duration: 0s;
+    
+  &.is-active {
+    transition-duration: 1s;
+    background-position: -2800px 0;
+  }
+}
+
+
+
+.swiper-button-next::after,
+.swiper-button-prev::after {
+  content: "" !important;
+}
+
+.title {
+  background: linear-gradient(30deg, #6A67CE, #B1659E, #FC636B);
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.skill .title-wrapper {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  margin-bottom: 8px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+ul {
+  list-style: none;
+}
+
+ .title-wrapper {
+  color: gray;
+  font-size: 15px;
+}
+
+.skills-item {
+  margin: 2rem 0;
+}
+
+.skill-progress-bg {
+  background-color:transparent;
+  padding: 2px 3px;
+  width: 100%;
+  height: 11px;
+  border-radius: 10px;
+  box-shadow: inset 0 3px 5px 0 rgb(0 0 0 / 0.35);
+}
+
+.skill-progress-fill {
+  background: linear-gradient(to left, #FC636B 0% , #B1659E 50% , #6A67CE 100%);
+  height: 100%;
+  border-radius: 10px;
+  animation: processbar-fill 2s linear;
+}
+
+@keyframes processbar-fill {
+  from {
+      width: 0;
+  }
+
+  to {
+      width: width;
+  }
+}
+
+.cards-resume:hover h1{
+color: white
+}
+.cards-resume:hover .title-resume p{
+  color: white
+  }
+  
+.cards-resume:hover .discription-card {
+  color: rgb(214, 214, 214)
+}
+.experience-section{
+  z-index: 5;
+  padding-left: 28px;
+  border-left: 5px solid #17191c;
+}
+.cards-resume::before{
+  position: absolute;
+  content: "";
+  width: 21px;
+  height: 5px;
+  margin-left: -20px;
+  left: 0;
+  top: 63px;
+  background: #17191cce;
+  z-index: 0;
+
+}
+.cards-resume::after{
+  position: absolute;
+  content: "";
+  width: 20px;
+  height: 20px;
+  border: 5px solid #17191c;
+  border-radius: 100%;
+  left: -40px;
+  top: 55px;
+  background: #212428 ;
+  transition: 0.2s ease-in-out;
+}
+
+.cards-resume{
+  position: relative;
+  z-index: 6;
+  margin-top: 50px;
+  padding: 45px 40px;
+  border-radius: 6px;
+  width: 100%
+}
+.star-rating {
+  font-size: 24px; /* اندازه فونت برای ستاره‌ها */
+}
+
+.star {
+  display: inline-block;
+  width: 20px; /* عرض هر ستاره */
+  height: 20px; /* ارتفاع هر ستاره */
+  background-image: images('/icon-shahriarh/products/star.png'); /* تصویر ستاره */
+  background-size: contain; /* تصویر در اندازه مطلوب قرار گیرد */
+}
+
+.star:nth-child(n + 1) {
+  margin-right: 5px; /* فاصله بین ستاره‌ها */
+}
+
+.star:nth-child(-n + 3.7) {
+  background-image: images('/icon-shahriarh/products/emptyStar.png'); ; /* تصویر ستاره پر شده */
+}
+
+.shadow-border{
+  box-shadow: inset -0.1px -0.8px 5px rgba(255, 255, 255, 0.26) , inset 0px 4px 2px rgba(3, 3, 3, 0.508);
+}
+.Toastify__toast-body{
+  font-family: "Montserrat", sans-serif !important;
+  font-size: 1rem;
+  gap: 5px;
+  
+}
+.ant-otp .ant-otp-input {
+    text-align: center;
+    font-size: 1.5rem;
+    padding: 15px 15px;
+    border-radius: 1rem;
+}
+
+.ant-otp {
+  column-gap: 25px;
+}
+
+@layer components {
+  .btn-h-smal {
+    @apply transition rounded-lg py-2 px-4 shadow-3xl;
+  }
+  .btn-h-medium {
+    @apply transition rounded-lg py-4 px-6 shadow-3xl;
+  }
+  .btn-h {
+    @apply transition rounded-lg py-5 px-8 shadow-3xl;
+  }
+  .btn-color {
+    @apply transition bg-gradient-to-r hover:from-bgray to-10% hover:to-bgray2 to-90%;
+  } 
+  .trasition-btn {
+    @apply transition hover:-translate-y-2 duration-500;
+  } 
+  .trasition-btn2{
+    @apply transition hover:-translate-y-4 duration-500;
+  }
+} 
+  
